@@ -1,0 +1,40 @@
+.card-container {
+    /* display: flex; */
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.Studentcard {
+    
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    /* border-radius: 10px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.Studentcard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Studentcard .pic img {
+    width: fit-content;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.Studentcard .student-details h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Styling for the links */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Add additional styles as needed */

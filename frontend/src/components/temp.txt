@@ -1,0 +1,65 @@
+import { useState,useEffect } from "react";
+import {  useParams } from "react-router-dom";
+import './studentcard.css'; 
+import {Chart} from 'react-google-charts';
+import axios from "axios";
+const Stuportfolio=()=>{
+    const {id}=useParams();
+    const [details,setdetails]=useState({});
+    useEffect(()=>{
+        axios.get('http://localhost:7000/getByid/'+id)
+        .then((result)=>{
+            setdetails(result.data.result.userdetails);
+            // console.log(result.data.result.userdetails);
+        });
+    },[id]);
+         const data = [
+            ["Attendance", "Till Now"],
+            ["present", details.percentage],
+            ["Absent",100-details.percentage]
+          ];
+          
+         const options = {
+            title: "Attendance percentage",
+          };
+        return (
+            <>
+            <div className="container mt-5 d-flex justify-content-between">
+                <div className="student-card col-md-4 p-5">
+                <div className="img">
+                    <img src="http://localhost:7000/images/studprofile.png" alt="Student Avatar" />
+                    <h2>{details.name+" "+details.lname}</h2>
+                </div>
+                <div className="student-detials">
+                    <p><strong>Roll Number:</strong> {details.rollno}</p>
+                    <p><strong>Phone Number:</strong> {details.phno}</p>
+                    <p><strong>Email:</strong> {details.email}</p>
+                    <p><strong>Course:</strong> {details.course}</p>
+                </div>
+            </div>
+            <div className="student-card row col-md-8 d-flex justify-content w-75">
+            <div className="img col-md-6">
+            <Chart
+                    chartType="PieChart"
+                    data={data}
+                    options={options}
+                    width={"100%"}
+                    height={"100%"}
+                    />
+                <h2 className="mb-2">Attendance report</h2>
+
+                </div>
+                <div className="student-details mb-5 col-md-6">
+                    <h1 className="mb-5">Student Data</h1>
+                    <p><strong>No of Days Present:</strong> {details.presentDays}</p>
+                    <p><strong>Total Working Days:</strong> {details.TotalDays}</p>
+                    <p><strong>status:</strong> {details.attendence?<>Present</>:<>Absent</>}</p>
+                    <p><strong>percentage:</strong> {details.percentage}</p>
+                </div>
+            </div>
+        </div>
+        </>
+        )
+}
+export default Stuportfolio;
+

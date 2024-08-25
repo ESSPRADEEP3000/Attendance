@@ -1,0 +1,64 @@
+.student-card {
+  width: 100%;
+  max-width: 400px; /* Constrain max width */
+  height: fit-content;
+  background-color: #f8f9fa; /* Light gray background */
+  border: none; /* Remove border */
+  border-radius: 12px; /* Larger border radius for a softer look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto; /* Center and add margin */
+  padding: 24px; /* Increase padding */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-card:hover {
+  background-color: #ffffff; /* Slightly brighter on hover */
+  transform: translateY(-4px); /* Lift effect on hover */
+}
+
+.student-avatar img {
+  width: 120px; /* Fixed size for consistency */
+  height: 120px;
+  border-radius: 50%; /* Circular avatar */
+  margin-bottom: 16px; /* Consistent spacing */
+  object-fit: cover; /* Ensure image fits well */
+}
+
+.student-details h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #333; /* Darker text for better contrast */
+  font-weight: 600; /* Slightly bolder font */
+}
+
+.student-details p {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #555; /* Subtle gray for less emphasis */
+}
+
+.card-chart {
+  width: 100%;
+  max-width: 320px; /* Restrict chart width for better fit */
+  height: auto; /* Adjust height automatically */
+  margin-top: 16px; /* Consistent spacing */
+  color:white;
+}
+
+@media (min-width: 768px) {
+  .student-card {
+    max-width: 600px; /* Larger width on bigger screens */
+  }
+  
+  .student-avatar img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .student-details h2 {
+    font-size: 1.8rem;
+  }
+}
