@@ -43,13 +43,13 @@ function Signup() {
   };
 
   return (
-    <div className="container mx-auto p-6 my-5">
+    <div className="container mx-auto p-6 my-5 bg-black">
       {user ? (
         <div className="text-center">
           <h1 className="text-xl font-bold">You have already logged in...</h1>
         </div>
       ) : (
-        <div className="flex flex-col md:flex-row justify-center">
+        <div className="flex flex-col md:flex-row justify-center ">
           {/* <div className="md:w-1/2 flex justify-center items-center">
             <img
               src="http://localhost:7000/images/login.png"
@@ -58,11 +58,11 @@ function Signup() {
             />
           </div> */}
           <div className="md:w-1/2 flex justify-center items-center">
-            <div className="w-full max-w-md p-6 bg-white shadow-md rounded-lg">
-              <h2 className="text-2xl font-bold text-center mb-6">Signup</h2>
+            <div className="w-full max-w-md p-6 bg-gray-900 shadow-md rounded-lg">
+              <h2 className="text-2xl font-bold text-center mb-6 text-white">Signup</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="name" className="block text-sm font-medium text-white">
                     First Name
                   </label>
                   <input
@@ -72,11 +72,11 @@ function Signup() {
                     value={formdata.name}
                     autoComplete="true"
                     onChange={(e) => setFormdata({ ...formdata, name: e.target.value })}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 bg-gray-800 text-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-100 focus:border-white sm:text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lname" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="lname" className="block text-sm font-medium text-white">
                     Last Name
                   </label>
                   <input
@@ -86,11 +86,11 @@ function Signup() {
                     value={formdata.lname}
                     autoComplete="true"
                     onChange={(e) => setFormdata({ ...formdata, lname: e.target.value })}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 bg-gray-800 text-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-100 focus:border-white sm:text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="email" className="block text-sm font-medium text-white">
                     Email Address
                   </label>
                   <input
@@ -100,11 +100,11 @@ function Signup() {
                     value={formdata.email}
                     autoComplete="true"
                     onChange={(e) => setFormdata({ ...formdata, email: e.target.value })}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 bg-gray-800 text-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-100 focus:border-white sm:text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phno" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="phno" className="block text-sm font-medium text-white">
                     Phone No
                   </label>
                   <input
@@ -114,11 +114,11 @@ function Signup() {
                     value={formdata.phno}
                     autoComplete="true"
                     onChange={(e) => setFormdata({ ...formdata, phno: e.target.value })}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 bg-gray-800 text-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-100 focus:border-white sm:text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="rollno" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="rollno" className="block text-sm font-medium text-white">
                     Roll No
                   </label>
                   <input
@@ -128,11 +128,11 @@ function Signup() {
                     value={formdata.rollno}
                     autoComplete="true"
                     onChange={(e) => setFormdata({ ...formdata, rollno: e.target.value })}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 bg-gray-800 text-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-100 focus:border-white sm:text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="course" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="course" className="block text-sm font-medium text-white">
                     Course
                   </label>
                   <select
@@ -141,7 +141,7 @@ function Signup() {
                     value={formdata.course}
                     onChange={(e) => setFormdata({ ...formdata, course: e.target.value })}
                     required
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 bg-gray-800 text-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-100 focus:border-white sm:text-sm"
                   >
                     <option value="">----------------------Select course-------------</option>
                     <option value="FSD">FSD</option>
@@ -152,7 +152,7 @@ function Signup() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="passwd" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="passwd" className="block text-sm font-medium text-white">
                     Password
                   </label>
                   <input
@@ -161,11 +161,11 @@ function Signup() {
                     type="password"
                     value={formdata.passwd}
                     onChange={(e) => setFormdata({ ...formdata, passwd: e.target.value })}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 bg-gray-800 text-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-100 focus:border-white sm:text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="conpasswd" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="conpasswd" className="block text-sm font-medium text-white">
                     Confirm Password
                   </label>
                   <input
@@ -174,7 +174,7 @@ function Signup() {
                     type="password"
                     value={cnfpasswd}
                     onChange={(e) => setCnfPass(e.target.value)}
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-1 bg-gray-800 text-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-100 focus:border-white sm:text-sm"
                   />
                   {formdata.passwd === cnfpasswd && cnfpasswd !== '' ? (
                     <div className="text-green-500 mt-2">Password matched</div>
