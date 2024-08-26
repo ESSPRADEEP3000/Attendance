@@ -619,7 +619,7 @@ const Home = () => {
           data-aos-delay="400"
         >
           <img
-            src="https://attendance-9sen.onrender.com/images/hero-img.png"
+            src="https://attendance-9sen.onrender.com/images/hero-img1.png"
             className="w-full mx-auto max-w-lg rounded-xl"
             alt="Attendance Management System"
           />
