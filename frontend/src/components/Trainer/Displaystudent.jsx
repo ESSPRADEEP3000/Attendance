@@ -69,15 +69,15 @@ function Display() {
       <table className="min-w-full bg-gray-800 text-white border-2 border-white shadow-lg">
         <thead className="bg-gray-800">
           <tr>
-            <th className="py-2 px-4 border-b">S.no</th>
-            <th className="py-2 px-4 border-b">First Name</th>
-            <th className="py-2 px-4 border-b">Last Name</th>
-            <th className="py-2 px-4 border-b">Email</th>
-            <th className="py-2 px-4 border-b">Phone No</th>
-            <th className="py-2 px-4 border-b">Roll No</th>
-            <th className="py-2 px-4 border-b">Course</th>
-            <th className="py-2 px-4 border-b">Attendance</th>
-            <th className="py-2 px-4 border-b">Sessions</th>
+            <th className="py-2 px-4 border-b text-center">S.no</th>
+            <th className="py-2 px-4 border-b text-center">First Name</th>
+            <th className="py-2 px-4 border-b text-center">Last Name</th>
+            <th className="py-2 px-4 border-b text-center">Email</th>
+            <th className="py-2 px-4 border-b text-center">Phone No</th>
+            <th className="py-2 px-4 border-b text-center">Roll No</th>
+            <th className="py-2 px-4 border-b text-center">Course</th>
+            <th className="py-2 px-4 border-b text-center">Attendance</th>
+            <th className="py-2 px-4 border-b text-center">Sessions</th>
             {/* <th className="py-2 px-4 border-b">Percentage</th> */}
             <th className="py-2 px-4 border-b">Actions</th>
           </tr>
@@ -139,13 +139,13 @@ function Display() {
                     </>
                   )
                 }
-                <td className="py-2 px-4 border-b text-center">
+                <td className="py-2 px-4 border-b text-center flex space-x-2 justify-center">
                   {editMode === ele._id ? (
-                    <button className="bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600 mx-1" onClick={() => savedata(ele._id)}>Save</button>
+                    <button className="bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600 " onClick={() => savedata(ele._id)}>Save</button>
                   ) : (
-                    <button className="bg-yellow-500 text-black py-1 px-2 rounded hover:bg-yellow-600 mx-1" onClick={() => edit(ele._id)}>Edit</button>
+                    <button className="bg-yellow-500 text-black py-1 px-2 rounded hover:bg-yellow-600 " onClick={() => edit(ele._id)}>Edit</button>
                   )}
-                  <button className="bg-red-500 text-black py-1 px-2 rounded hover:bg-red-600 mx-1" onClick={() => deletee(ele._id)}>Delete</button>
+                  <button className="bg-red-500 text-black py-1 px-2 rounded hover:bg-red-600" onClick={() => deletee(ele._id)}>Delete</button>
                 </td>
               </tr>
             ))

@@ -123,7 +123,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="services py-16 bg-gray-900 text-white min-h-screen">
+    <section id="services" className="services py-16 bg-black text-white min-h-screen">
       <div className="container mx-auto px-4">
         <header className="text-center mb-12">
           <p className="text-4xl font-bold">Transform Your Attendance Management Experience</p>
