@@ -15,9 +15,7 @@ You can access the live demo of the application [here](https://attendance-jslw.v
 - [Technologies Used](#technologies-used)
 - [Pages Overview](#pages-overview)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
+- 
 ## Introduction
 
 -This Attendance Management System is designed for educational institutions to streamline the process of tracking student attendance.
