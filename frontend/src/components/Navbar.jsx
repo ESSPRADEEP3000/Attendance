@@ -598,7 +598,7 @@ const Menu = () => {
             {details ? (
               <button
                 onClick={handleLogout}
-                className="w-full text-gray-700 py-2 px-4 hover:bg-indigo-100"
+                className="w-full text-white-700 py-2 px-4 hover:bg-gray-800"
               >
                 Logout
               </button>
