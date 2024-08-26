@@ -225,8 +225,8 @@ function DisplayALL() {
   return (
     <div className="mt-5 p-4">
       <h1 className="text-2xl font-bold mb-4 text-center">Student Details Fetching from Backend</h1>
-      <table className="min-w-full bg-white border border-gray-200 shadow-lg">
-        <thead className="bg-gray-100">
+      <table className="min-w-full bg-gray-900 text-white border border-gray-200 shadow-lg">
+        <thead className="bg-gray-900">
           <tr>
             <th className="py-2 px-4 border-b">S.no</th>
             <th className="py-2 px-4 border-b">First Name</th>
@@ -244,7 +244,7 @@ function DisplayALL() {
         </thead>
         <tbody>
           {details.map((ele, ind) => (
-            <tr key={ele._id} className="hover:bg-gray-50">
+            <tr key={ele._id} className="hover:bg-gray-800">
               <td className="py-2 px-4 border-b text-center">{ind + 1}</td>
               {editMode === ele._id ? (
                 <>
@@ -295,9 +295,9 @@ function DisplayALL() {
                   <td className="py-2 px-4 border-b text-center">{ele.course}</td>
                   <td className="py-2 px-4 border-b text-center">
                     {ele.attendence === true ? (
-                      <span className="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Present</span>
+                      <span className="bg-green-600 text-white text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">Present</span>
                     ) : (
-                      <span className="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Absent</span>
+                      <span className="bg-red-600 text-white text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">Absent</span>
                     )}
                   </td>
                   <td className="py-2 px-4 border-b text-center">{ele.presentDays}/{ele.TotalDays}</td>
@@ -308,9 +308,9 @@ function DisplayALL() {
                 {editMode === ele._id ? (
                   <button className="bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600" onClick={() => savedata(ele._id)}>Save</button>
                 ) : (
-                  <button className="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600" onClick={() => edit(ele._id)}>Edit</button>
+                  <button className="bg-yellow-500 text-black py-1 font-semibold px-2 rounded hover:bg-yellow-600" onClick={() => edit(ele._id)}>Edit</button>
                 )}
-                <button className="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-600" onClick={() => deletee(ele._id)}>Delete</button>
+                <button className="bg-red-500 text-black py-1 px-2 rounded font-semibold hover:bg-red-600" onClick={() => deletee(ele._id)}>Delete</button>
               </td>
             </tr>
           ))}

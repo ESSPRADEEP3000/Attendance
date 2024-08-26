@@ -84,9 +84,9 @@ function TrainerData() {
     <div className="mt-8 px-4">
       <h1 className="text-2xl font-bold mb-6 text-center">Trainer Details</h1>
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white shadow-md rounded-lg">
+        <table className="min-w-full bg-gray-900 shadow-md rounded-lg">
           <thead>
-            <tr className="bg-gray-200 text-gray-700">
+            <tr className="bg-gray-900 text-white border-2">
               <th className="py-3 px-5 text-left">S.no</th>
               <th className="py-3 px-5 text-left">First Name</th>
               <th className="py-3 px-5 text-left">Last Name</th>
@@ -100,11 +100,11 @@ function TrainerData() {
           </thead>
           <tbody>
             {details.map((ele, ind) => (
-              <tr key={ele._id} className="border-b">
-                <td className="py-3 px-5">{ind + 1}</td>
+              <tr key={ele._id} className="border-2">
+                <td className="py-3 px-5 text-white">{ind + 1}</td>
                 {editMode === ele._id ? (
                   <>
-                    <td className="py-3 px-5">
+                    <td className="py-3 px-5 ">
                       <input
                         type="text"
                         value={ele.name}
@@ -181,40 +181,25 @@ function TrainerData() {
                   </>
                 ) : (
                   <>
-                    <td className="py-3 px-5">{ele.name}</td>
-                    <td className="py-3 px-5">{ele.lname}</td>
-                    <td className="py-3 px-5">{ele.email}</td>
-                    <td className="py-3 px-5">{ele.phno}</td>
-                    <td className="py-3 px-5">{ele.passwd}</td>
-                    <td className="py-3 px-5">{ele.Technology}</td>
-                    <td className="py-3 px-5">
+                    <td className="py-3 px-5 text-white">{ele.name}</td>
+                    <td className="py-3 px-5 text-white">{ele.lname}</td>
+                    <td className="py-3 px-5 text-white">{ele.email}</td>
+                    <td className="py-3 px-5 text-white">{ele.phno}</td>
+                    <td className="py-3 px-5 text-white">{ele.passwd}</td>
+                    <td className="py-3 px-5 text-white">{ele.Technology}</td>
+                    <td className="py-3 px-5 text-white text-center">
                       {ele.AttendanceTaken ? "Yes" : "No"}
                     </td>
                   </>
                 )}
-                <td className="py-3 px-5">
-                  {editMode === ele._id ? (
-                    <button
-                      className="bg-green-500 text-white px-3 py-1 rounded mr-2 hover:bg-green-600"
-                      onClick={() => saveData(ele._id)}
-                    >
-                      Save
-                    </button>
-                  ) : (
-                    <button
-                      className="bg-blue-500 text-white px-3 py-1 rounded mr-2 hover:bg-blue-600"
-                      onClick={() => edit(ele._id)}
-                    >
-                      Edit
-                    </button>
-                  )}
-                  <button
-                    className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-                    onClick={() => deletee(ele._id)}
-                  >
-                    Delete
-                  </button>
-                </td>
+                <td className="py-2 px-4 text-center flex justify-center space-x-2">
+                {editMode === ele._id ? (
+                  <button className="bg-green-500 text-white py-1 px-2 rounded hover:bg-green-600" onClick={() => saveData(ele._id)}>Save</button>
+                ) : (
+                  <button className="bg-yellow-500 text-black py-1 px-2 rounded hover:bg-yellow-600" onClick={() => edit(ele._id)}>Edit</button>
+                )}
+                <button className="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-600" onClick={() => deletee(ele._id)}>Delete</button>
+              </td>
               </tr>
             ))}
           </tbody>
