@@ -513,7 +513,7 @@ const Menu = () => {
             <img
               src="https://attendance-9sen.onrender.com/images/logo.png"
               alt="Logo"
-              className="h-8"
+              className="h-8 rounded-xl"
             />
             <span className="text-3xl font-bold">AttendX</span>
           </Link>
