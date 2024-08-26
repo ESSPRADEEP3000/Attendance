@@ -14,7 +14,6 @@ You can access the live demo of the application [here](https://attendance-jslw.v
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Pages Overview](#pages-overview)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
