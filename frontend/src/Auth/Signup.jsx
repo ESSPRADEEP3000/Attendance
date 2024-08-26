@@ -33,7 +33,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post('http://localhost:7000/adduser', formdata);
+      const result = await axios.post('https://attendance-9sen.onrender.com/adduser', formdata);
       alert(result.data.msg);
       navigate('/login');
     } catch (error) {

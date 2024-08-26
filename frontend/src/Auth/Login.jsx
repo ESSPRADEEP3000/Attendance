@@ -27,9 +27,9 @@ function FrontPage() {
   const check = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post('http://localhost:7000/check-login', formdata);
+      const result = await axios.post('https://attendance-9sen.onrender.com/check-login', formdata);
       if (result.data.loggedin) {
-        const res = await axios.get('http://localhost:7000/dashboard', {
+        const res = await axios.get('https://attendance-9sen.onrender.com/dashboard', {
           headers: {
             'Authorization': `${result.data.token}`,
           },
