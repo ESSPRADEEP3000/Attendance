@@ -544,7 +544,7 @@ const Menu = () => {
                 <div className="absolute right-0 mt-2   border-2 border-gray-200 rounded-lg shadow-lg">
                   <button
                     onClick={handleLogout}
-                    className="block px-4 py-2 text-gray-700 hover:bg-indigo-800"
+                    className="block px-4 py-2 text-white hover:bg-gray-800"
                   >
                     Logout
                   </button>
@@ -553,7 +553,7 @@ const Menu = () => {
             </div>
           ) : (
             <Link to="/login">
-              <span className="bg-purple-950 text-white py-2 px-4 rounded-lg hover:bg-purple-700 ">
+              <span className="bg-gray-950 text-white py-2 px-4 rounded-lg hover:bg-white hover:text-black ">
                 Login
               </span>
             </Link>
@@ -598,7 +598,7 @@ const Menu = () => {
             {details ? (
               <button
                 onClick={handleLogout}
-                className="w-full text-white-700 py-2 px-4 hover:bg-gray-800"
+                className="w-full text-white py-2 px-4 hover:bg-gray-800"
               >
                 Logout
               </button>
