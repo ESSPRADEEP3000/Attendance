@@ -174,21 +174,21 @@ function DisplayALL() {
   const { tech } = useParams();
 
   useEffect(() => {
-    axios.get('http://localhost:7000/getdata')
+    axios.get('https://attendance-9sen.onrender.com/getdata')
       .then((result) => {
         setData(result.data.data);
       });
   }, [details.length]);
 
   function deletee(id) {
-    axios.delete('http://localhost:7000/delete-user/' + id).then(result => {
+    axios.delete('https://attendance-9sen.onrender.com/delete-user/' + id).then(result => {
       alert(result.data.message);
     });
   }
 
   function edit(id) {
     setEditMode(id);
-    axios.get('http://localhost:7000/getByid/' + id)
+    axios.get('https://attendance-9sen.onrender.com/getByid/' + id)
       .then(result => { console.log(result.data.result.userdetails); });
   }
 
@@ -199,10 +199,10 @@ function DisplayALL() {
       if (id === ele._id)
         tempdata = ele;
     });
-    axios.put('http://localhost:7000/update-user/' + id, tempdata)
+    axios.put('https://attendance-9sen.onrender.com/update-user/' + id, tempdata)
       .then(result => { alert(result.data.msg); })
       .then(() => {
-        axios.get('http://localhost:7000/getByid/' + id)
+        axios.get('https://attendance-9sen.onrender.com/getByid/' + id)
           .then(result => { console.log(result.data.result.userdetails); });
       });
   }

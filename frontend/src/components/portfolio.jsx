@@ -646,7 +646,7 @@ const Stuportfolio = () => {
         {/* Profile Section */}
         <div className="col-span-1 bg-gray-900 text-white rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
           <img
-            src="http://localhost:7000/images/studprofile.png"
+            src="https://attendance-9sen.onrender.com/images/studprofile.png"
             alt="Student Avatar"
             className="rounded-full mx-auto mb-4 w-32 h-32 object-cover border-4 border-white"
           />

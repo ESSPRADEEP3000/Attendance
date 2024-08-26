@@ -93,7 +93,7 @@ const Admin = () => {
         {/* Student List Card */}
         <Link to={`Displayall`} className="block p-6 bg-white rounded-lg shadow-md hover:bg-gray-100 transition duration-200">
           <div className="flex items-center">
-            <img src="http://localhost:7000/images/studprofile.png" alt="Student Avatar" className="w-16 h-16 rounded-full mr-4" />
+            <img src="https://attendance-9sen.onrender.com/images/studprofile.png" alt="Student Avatar" className="w-16 h-16 rounded-full mr-4" />
             <div>
               <h2 className="text-xl font-semibold">Student List</h2>
               <p className="text-gray-600">View all students</p>
@@ -104,7 +104,7 @@ const Admin = () => {
         {/* Add Trainer Card */}
         <Link to={`AddTrainer`} className="block p-6 bg-white rounded-lg shadow-md hover:bg-gray-100 transition duration-200">
           <div className="flex items-center">
-            <img src="http://localhost:7000/images/studprofile.png" alt="Add Trainer" className="w-16 h-16 rounded-full mr-4" />
+            <img src="https://attendance-9sen.onrender.com/images/studprofile.png" alt="Add Trainer" className="w-16 h-16 rounded-full mr-4" />
             <div>
               <h2 className="text-xl font-semibold">Add Trainer</h2>
               <p className="text-gray-600">Add a new trainer</p>
@@ -115,7 +115,7 @@ const Admin = () => {
         {/* Trainer List Card */}
         <Link to={`Trainerlist`} className="block p-6 bg-white rounded-lg shadow-md hover:bg-gray-100 transition duration-200">
           <div className="flex items-center">
-            <img src="http://localhost:7000/images/studprofile.png" alt="Trainer List" className="w-16 h-16 rounded-full mr-4" />
+            <img src="https://attendance-9sen.onrender.com/images/studprofile.png" alt="Trainer List" className="w-16 h-16 rounded-full mr-4" />
             <div>
               <h2 className="text-xl font-semibold">Trainer List</h2>
               <p className="text-gray-600">View all trainers</p>

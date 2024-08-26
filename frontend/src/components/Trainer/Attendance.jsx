@@ -19,7 +19,7 @@ function Attendance() {
     setFormdata({ ...formdata, attendence: true });
     console.log(formdata);
 
-    axios.put('http://localhost:7000/check-attendence', formdata)
+    axios.put('https://attendance-9sen.onrender.com/check-attendence', formdata)
       .then((result) => {
         setVal(result.data.value);
         setMsg(result.data.msg);
@@ -33,7 +33,7 @@ function Attendance() {
         {/* Left Side: Image */}
         <div className="flex-1 mb-6 md:mb-0 md:mr-8">
           <img 
-            src="http://localhost:7000/images/login.png" 
+            src="https://attendance-9sen.onrender.com/images/login.png" 
             className="w-full h-auto rounded-lg shadow-md" 
             alt="Phone illustration" 
           />

@@ -335,7 +335,7 @@ function AddTrainer() {
     setFormdata({ ...formdata, AttendanceTaken: true });
     console.log(formdata);
 
-    axios.post('http://localhost:7000/addtrainer', formdata)
+    axios.post('https://attendance-9sen.onrender.com/addtrainer', formdata)
       .then((result) => {
         console.log(result.data);
         alert(result.data.msg);

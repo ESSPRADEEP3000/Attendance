@@ -9,7 +9,7 @@ function TrainerData() {
 
   // Fetch data from backend once when the component mounts
   useEffect(() => {
-    axios.get("http://localhost:7000/gettrain")
+    axios.get("https://attendance-9sen.onrender.com/gettrain")
       .then((result) => {
         setDetails(result.data.data);
       })
@@ -21,7 +21,7 @@ function TrainerData() {
   // Function to handle deletion
   function deletee(id) {
     if (window.confirm("Are you sure?")) {
-      axios.delete("http://localhost:7000/delete-trainer/" + id)
+      axios.delete("https://attendance-9sen.onrender.com/delete-trainer/" + id)
         .then((result) => {
           alert(result.data.message);
           setDetails(details.filter((ele) => ele._id !== id)); // Remove deleted item from state
@@ -36,7 +36,7 @@ function TrainerData() {
   function edit(id) {
     console.log("Editing data");
     setEditMode(id);
-    axios.get("http://localhost:7000/gettrainByid/" + id)
+    axios.get("https://attendance-9sen.onrender.com/gettrainByid/" + id)
       .then((result) => {
         console.log(result.data.userdetails);
       })
@@ -51,7 +51,7 @@ function TrainerData() {
     const updatedData = details.find((ele) => ele._id === id);
 
     if (updatedData) {
-      axios.put("http://localhost:7000/update-trainer/" + id, updatedData)
+      axios.put("https://attendance-9sen.onrender.com/update-trainer/" + id, updatedData)
         .then((result) => {
           alert(result.data.msg);
         })

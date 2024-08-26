@@ -511,7 +511,7 @@ const Menu = () => {
         <div className="flex items-center space-x-4">
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="http://localhost:7000/images/logo.png"
+              src="https://attendance-9sen.onrender.com/images/logo.png"
               alt="Logo"
               className="h-8"
             />

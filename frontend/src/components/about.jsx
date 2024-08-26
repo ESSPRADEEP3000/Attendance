@@ -570,12 +570,6 @@ const About = () => {
     <section id="about" className="py-16 text-white">
       <div className="container mx-auto px-4 lg:px-20">
       <h3 className="text-4xl font-bold mb-6 lg:mb-8 text-center">Attendance Management System</h3>
-              {/* <h2 className="text-3xl mb-4 lg:mb-6 font-light">
-                Track student attendance efficiently with our system.
-              </h2> */}
-              {/* <p className="mb-4 lg:mb-8 text-lg">
-                Our system offers tailored logins for various users, each serving a specific purpose to ensure smooth and efficient attendance management.
-              </p> */}
         {/* Student Login */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 mb-16" data-aos="fade-up">
           <div
@@ -606,12 +600,12 @@ const About = () => {
           >
             <div className="relative ">
               <img
-                src="http://localhost:7000/images/studentlg.png"
+                src="https://attendance-9sen.onrender.com/images/studentlg.png"
                 className="relative h-24 md:h-32 lg:h-40 w-64 md:w-96 lg:w-[30rem]  left-4 md:left-8 rounded-md shadow-sm transform transition-transform hover:scale-125 duration-500 ease-in-out"
                 alt="Student Features Large"
               />
               <img
-                src="http://localhost:7000/images/student.png"
+                src="https://attendance-9sen.onrender.com/images/student.png"
                 className="relative w-40 h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 bottom-4 md:bottom-7 rounded-3xl shadow-lg transform transition-transform hover:scale-125 duration-500 ease-in-out"
                 alt="Student Features"
               />
@@ -627,7 +621,7 @@ const About = () => {
             data-aos-delay="300"
           >
             <img
-              src="http://localhost:7000/images/trainer.png"
+              src="https://attendance-9sen.onrender.com/images/trainer.png"
               className="w-40 h-64 md:w-80 md:h-[20rem] lg:w-[24rem] lg:h-[36rem] top-12 md:top-48 rounded-3xl shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out"
               alt="Trainer Features"
             />
@@ -670,7 +664,7 @@ const About = () => {
             data-aos-delay="300"
           >
             <img
-              src="http://localhost:7000/images/admin.png"
+              src="https://attendance-9sen.onrender.com/images/admin.png"
               className="w-64 h-64  md:w-80 md:h-fit rounded-3xl shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out"
               alt="Admin Features"
             />
